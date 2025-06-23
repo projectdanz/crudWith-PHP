@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 ?>
 
-<form action="POST">
+<form method="POST">
     Judul: <input type="text" name="title"><br>
     Deskripsi: <textarea name="description"></textarea><br>
     Aktif: <input type="checkbox" name="is_active" checked><br>
