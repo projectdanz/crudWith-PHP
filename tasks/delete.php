@@ -7,7 +7,6 @@ if(!isset($_SESSION['user_id'])) {
 }
 
 $id = $_GET['id'];
-$userId = $_SESSION['user_id'];
-$conn->query("SELECT FROM tasks WHERE id=$id AND user_id=$userId");
+$conn->query("DELETE FROM tasks WHERE id=$id AND user_id=" . $_SESSION['user_id']);
 header("Location: index.php")
 ?>

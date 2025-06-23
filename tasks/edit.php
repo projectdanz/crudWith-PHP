@@ -7,12 +7,12 @@ if (!isset($_SESSION['user_id'])){
 }
 
 $id = $_GET['id'];
-$res = $conn->query("SELECT * FROM tasks WHERE id = $id AND user_id" . $_SESSION['user_id']);
+$res = $conn->query("SELECT * FROM tasks WHERE id=$id AND user_id=" . $_SESSION['user_id']);
 $data = $res->fetch_assoc();
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $title = $_POST['title'];
-    $desc = $_POST['descripion'];
+    $desc = $_POST['description'];
     $is_active = isset($_POST['is_active']) ? 1 : 0;
 
     $stmt = $conn->prepare("UPDATE tasks SET title=?, description=?, is_active=? WHERE id=?");
