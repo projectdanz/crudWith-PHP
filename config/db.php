@@ -1,9 +1,9 @@
 <?php
 
-$host = "localhost";
+$host = "127.0.0.1";
 $user = "masdanz";
 $pass = "masdanz";
-$db = "task_sb";
+$db = "task_db";
 
 $conn = new mysqli($host, $user, $pass, $db);
 
